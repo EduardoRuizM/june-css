@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+<title>JuNe CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#FEA700">
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="june-cssfa.css">
+
+<script>
+function shake(o) {
+  o.addEventListener('animationend', () => o.classList.toggle('shake'));
+  o.classList.toggle('shake');
+}
+function colorScheme(c) {
+  const d = window.matchMedia('(prefers-color-scheme: dark)').matches, l = localStorage.getItem('colorScheme');
+  if(!c || (c && ((d && l === 'light') || (!d && l === 'dark'))))
+    document.documentElement.classList.toggle((d) ? 'light' : 'dark');
+  const e = document.documentElement.classList.contains((d) ? 'light' : 'dark');
+  const v = (e) ? ((d) ? 'light' : 'dark') : null;
+  localStorage.setItem('colorScheme', v);
+  document.getElementById('colorScheme').checked = ((e && v === 'dark') || (!e && d));
+}
+window.addEventListener('load', () => colorScheme(true));
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', m => colorScheme(true));
+</script>
+</head>
+
+<body>
+
+<div class="main">
+
+  <header style="z-index: 2; height: 64px; background: #C80" class="tc">
+
+    <div style="float: left; padding-top: 20px">
+      <nav role="navigation">
+	<div id="menuToggle">
+	  <input type="checkbox" style="background:red"><span></span><span></span><span></span>
+	  <ul id="menu">
+	    <a href="#"><li>Menu 1</li></a>
+	    <a href="#"><li>Menu 2</li></a>
+	  </ul>
+	</div>
+      </nav>
+    </div>
+
+    <a href="https://github.com/EduardoRuizM/june-css" target="_blank"><img src="logo.png" style="height: 60px"></a>
+
+    <div style="float: right"><input id="colorScheme" type="checkbox" class="switch" onclick="colorScheme()" style="--checked: '\1F311'; --unchecked: '\2600\FE0F'"></div>
+
+    <div style="height: 22px" class="theme">
+
+      <nav class="mobn menu">
+	<ul>
+	  <li><a href="#">Menu 1</a></li>
+	  <li><a href="#">Menu 2</a></li>
+	  <li class="dropdown">
+	    <a href="#" class="dropbtn">Dropdown</a>
+	    <div class="dropcnt">
+	      <a href="#">Link 1</a>
+	      <a href="#">Link 2</a>
+	      <a href="#">Link 3</a>
+	    </div>
+	  </li>
+	</ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <div style="height: 86px">&nbsp;</div><!-- Same height as header to avoid up hidden content text -->
+
+  <section class="cards lh">
+
+    <h1>JuNe CSS style classes</h1>
+    Normal text &bull; <a href="#">Default Link style</a><br><br>
+
+    <h2>Dark style</h2>
+    <div class="ov bgd">
+      Dark text (class=&quot;bgd&quot;)<br>
+      <a href="#" class="dlnk">Link (class=&quot;dlnk&quot;)</a><br>
+      <a href="#">Link style</a>
+    </div><br>
+
+    <h2>Theme style</h2>
+    <div class="ov theme">
+      Theme text (class=&quot;theme&quot;)<br>
+      <a href="#" class="tlnk">Link (class=&quot;tlnk&quot;)</a><br>
+    </div><br>
+
+    <h2>ToolTip, Required and Small</h2>
+    <span data-tooltip="&#10067; Help">ToolTipText (data-tooltip=&quot;&#10067; Help&quot;)</span> &nbsp; &bull; &nbsp;
+    <span class="req">Required (class=&quot;required&quot;)</span> &nbsp; &bull; &nbsp;
+    <span class="sm">Small (class=&quot;sm&quot;)</span><br><br>
+
+    <h2>Inputs</h2>
+    (class=&quot;txt&quot;)<br>
+    <select><option>Option 1</option><option>Option 2</option></select> &nbsp;
+    <select disabled><option>Option 1</option><option>Option 2</option></select> &nbsp;
+
+    <input type="text" class="txt" value="Text"> &nbsp;
+    <input type="text" class="txt" disabled value="Disabled"> &nbsp;
+    <input type="text" class="txt" readonly value="Readonly"> &nbsp;
+    <input type="email" class="txt" value="Email invalid"><br><br>
+
+    <textarea class="txt" placeholder="Textarea"></textarea> &nbsp;
+    <textarea class="txt" disabled placeholder="Disabled"></textarea> &nbsp;
+    <textarea class="txt" readonly placeholder="Readonly"></textarea><br>
+
+    <h2>Groups</h2>
+    <div class="txtgrp">
+      <div>$</div>
+      <input type="text" value="Hi">
+      <button class="button green">B1</button>
+      <button class="button">B2</button>
+    </div>
+    <br>
+    <div class="txtgrp">
+      <button class="button">Check</button>
+      <input type="text" value="4.99">
+      <div>$</div>
+    </div>
+    <br>
+    <div class="txtgrp">
+      <div>$</div>
+      <input type="text" value="Hi" disabled>
+      <button class="button green" disabled>B1</button>
+      <button class="button" disabled>B2</button>
+    </div><br>
+
+    <h2>Input checkbox Switch</h2>
+    <input type="checkbox" class="switch"> <input type="checkbox" class="switch" checked> (type=checkbox class=&quot;switch&quot;)
+    <input type="checkbox" class="switch" disabled> <input type="checkbox" class="switch" checked disabled> Disabled &nbsp;
+    <input type="checkbox" checked> (with accent-color) <input type="radio" name="rad" checked><input type="radio" name="rad"><br>
+    <input type="checkbox" class="switch" checked style="--checked: '\2714\FE0F'; --unchecked: '\274C'"> <input type="checkbox" class="switch" style="--checked: '\2714\FE0F'; --unchecked: '\274C'"> Use styles for unicode style=&quot;--checked: '\2714\FE0F'; --unchecked: '\274C'&quot;<br>
+    <input type="checkbox" class="switch" checked style="--top: -.2em; --checked: '\1F441\FE0F'; --unchecked: ' '"> Use styles for unicode style=&quot;--top: -.2em;--checked: '\1F441\FE0F'; --unchecked: ' '&quot; 
+    <br>Use <b>--top</b> to adjust/customize top position (depending on the character)<br><br>
+
+    <h2>Buttons</h2>
+    <table>
+      <tr><td><button class="button">Button</button></td><td>(class=&quot;button&quot;)</td><td><button class="button" disabled>Button</button></td><td>(disabled class=&quot;button&quot;)</td></tr>
+      <tr><td><button class="button blue">Button</button></td><td>(class=&quot;button blue&quot;)</td><td><button class="button blue" disabled>Button</button></td><td>(disabled class=&quot;button blue&quot;)</td></tr>
+      <tr><td><button class="button red">Button</button></td><td>(class=&quot;button red&quot;)</td><td><button class="button red" disabled>Button</button></td><td>(disabled class=&quot;button red&quot;)</td></tr>
+      <tr><td><button class="button green">Button</button></td><td>(class=&quot;button green&quot;)</td><td><button class="button green" disabled>Button</button></td><td>(disabled class=&quot;button green&quot;)</td></tr>
+      <tr><td><button class="button gray">Button</button></td><td>(class=&quot;button gray&quot;)</td><td><button class="button gray" disabled>Button</button></td><td>(disabled class=&quot;button gray&quot;)</td></tr>
+      <tr><td><button class="button black">Button</button></td><td>(class=&quot;button black&quot;)</td><td><button class="button black" disabled>Button</button></td><td>(disabled class=&quot;button black&quot;)</td></tr>
+    </table><br>
+
+    <h2>Text align: tl (left), tc (center), tj (justify), tr (right)</h2>
+    <h2>Vertical align: vt (top), vm (middle), vb (bottom)</h2>
+    <div style="width: 250px" class="ib ov gray tl"><b>Left</b> (class=&quot;ib ov tl&quot;)</div>
+    <div style="width: 250px" class="ib ov gray tc"><b>Center</b> (class=&quot;ib ov tc&quot;)</div>
+    <div style="width: 250px" class="ib ov gray tj"><b>Justify</b> (class=&quot;ib ov tj&quot;)</div>
+    <div style="width: 250px" class="ib ov gray tr"><b>Right</b> (class=&quot;ib ov tr&quot;)</div><br><br>
+
+    <h2>Loaders</h2>
+    <i style="--size: 40px" class="loader1"></i>&lt;i style=&quot;--size: 40px&quot; class=&quot;loader1&quot;&gt;&lt;/i&gt; &nbsp;
+    <i class="loader2"></i>&lt;i class=&quot;loader2&quot;&gt;&lt;/i&gt;<br><br>
+
+    <h2>Responsive columns (change window size to watch changes)</h2>
+  </section>
+
+  <section class="cards">
+    <div class="card50 tc" style="background: #CCD">50%</div><div class="card25 tc" style="background: #CEE">25%</div><div class="card25 tc" style="background: #C88">25%</div>
+  </section>
+  <br>
+  <section class="cards">
+    <div class="card40 tc" style="background: #8CF">40%</div><div class="card60 tc" style="background: #CEA">60%</div>
+  </section>
+  <br>
+  <section class="cards">
+    <div class="card33 tc" style="background: #CCD">33%</div><div class="card33 tc" style="background: #CEE">33%</div><div class="card33 tc" style="background: #ECE">33%</div>
+  </section>
+  <br>
+  <section class="cards">
+    <div class="card25 tc" style="background: #CCC">25%</div><div class="card25 tc" style="background: #BDA">25%</div><div class="card25 tc" style="background: #F88">25%</div><div class="card25 tc" style="background: #BDA">25%</div>
+  </section>
+
+  <section class="cards">
+    <h2>Responsive Table (change window size to watch changes)</h2>
+    <table width="100%" class="rtbl">
+      <thead>
+	<tr>
+	  <th><a href="#">Column1</a></th>
+	  <th>Column2</th>
+	  <th>Column3</th>
+	</tr>
+      </thead>
+      <tbody>
+	<tr>
+	  <td data-cn="Column1"><a href="#">Value 1.1</a></td>
+	  <td data-cn="Column2">Value 1.2</td>
+	  <td data-cn="Column3">Value 1.3</td>
+	</tr>
+	<tr>
+	  <td data-cn="Column1"><a href="#">Value 2.1</a></td>
+	  <td data-cn="Column2">Value 2.2</td>
+	  <td data-cn="Column3">Value 2.3</td>
+	</tr>
+	<tr>
+	  <td data-cn="Column1"><a href="#">Value 3.1</a></td>
+	  <td data-cn="Column2">Value 3.2</td>
+	  <td data-cn="Column3">Value 3.3</td>
+	</tr>
+      </tbody>
+    </table><br>
+
+    <div class="box"><h3>class=&quot;box&quot;</h3></div><br>
+
+    <div class="box boxlnk vt ib"><h3>class=&quot;box boxlnk&quot;</h3></div> &nbsp;
+    <div class="box vt ib cp nosel" onclick="shake(this)"><h3>Click to shake</h3>(JS function requires)</div>
+
+    <h2>Badge</h2>
+    (class=&quot;badge&quot; data-badge=&quot;88&quot;)<br>
+    With optional colors (class=&quot;badge&quot; data-badge=&quot;2&quot; style=&quot;--badgefg: var(--jcclr); --badgebg: var(--jcbgray)&quot;)<br><br>
+    <span class="badge" data-badge="88">Badge default</span> &nbsp;
+    <span class="badge" data-badge="5" style="--badgebg: var(--jcbred)">Badge change background</span> &nbsp;
+    <span class="badge" data-badge="2" style="--badgefg: var(--jcclr); --badgebg: var(--jcbgray)">Badge colors</span><br><br>
+
+    <h2><a href="https://fontawesome.com" target="_blank">Font Awesome</a></h2>
+    <i class="fa-solid fa-computer fa-2x"></i>&lt;i class=&quot;fa-solid fa-computer fa-2x&quot;&gt;&lt;/i&gt; &nbsp;
+    <i class="fas fa-spinner fa-spin fa-2x"></i>&lt;i class=&quot;fas fa-spinner fa-spin fa-2x&quot;&gt;&lt;/i&gt;<br><br>
+    <i class="fa-solid fa-heart fa-beat fa-2x"></i>&lt;i class=&quot;fa-solid fa-heart fa-beat fa-2x&quot;&gt;&lt;/i&gt; &nbsp;
+    <i class="fa-solid fa-camera-rotate fa-flip fa-2x"></i>&lt;i class=&quot;fa-solid fa-camera-rotate fa-flip fa-2x&quot;&gt;&lt;/i&gt;
+  </section>
+
+  <div style="height: 110px"></div><!-- Same height as footer to avoid bottom hidden content text -->
+
+  <footer style="position: absolute; bottom: 0; width: 100%">
+    <div style="height: 40px; padding-top: 14px" class="bgd tc">Try <a href="https://paulajs.com" target="_blank">PaulaJS</a></div>
+    <div style="height: 18px; color: #FFF; background: #171717" class="bgd sm tc">Powered by <a href="https://github.com/EduardoRuizM/june-css" target="_blank">JuNe CSS</a></div>
+  </footer>
+
+</div>
+
+</body>
+</html>

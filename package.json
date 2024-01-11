@@ -1,0 +1,21 @@
+{
+  "name": "june-css",
+  "version": "2.1.0",
+  "author": "Eduardo Ruiz <eruiz@dataclick.es> (https://www.dataclick.es)",
+  "description": "JuNe CSS complete and minified Cascading Style Sheets with everything you need to format the layout of a responsive webpage",
+  "keywords": [
+    "css", "responsive", "frontend", "mobile-first", "framework", "app", "web"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/EduardoRuizM/june-css",
+  "bugs": {
+    "url": "https://github.com/EduardoRuizM/june-css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EduardoRuizM/june-css.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

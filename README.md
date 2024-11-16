@@ -1,29 +1,38 @@
 <p align="center">
-  <img src="logo.png" title="JuNe CSS" width="274" height="194" />
+  <img src="logo.png" title="JuNe CSS" width="274" height="194">
 </p>
 
 # [JuNe CSS](https://github.com/EduardoRuizM/june-css "JuNe CSS")
 JuNe CSS is a complete and minified Cascading Style Sheets with everything you need to format the layout of a responsive webpage, in just 14 Kb (Bootstrap with 262 Kb).
 
 ✔ Responsive for mobile / tablets / desktop.
+
 ✔ Dark and Light mode.
+
 ✔ Responsive tables.
+
 ✔ Desktop menu.
+
 ✔ Hamburger menu.
+
 ✔ ToolTipTexts, Badges.
+
 ✔ Switches with unicode characters.
+
 ✔ Loaders.
+
 ✔ Designed for users with presbyopia.
+
 ✔ Version with [Font Awesome](https://fontawesome.com "Font Awesome")
 
 ![14 Kb](https://img.shields.io/github/size/EduardoRuizM/june-css/june-css.css)
 
-### 👉 Try JavaScript framework for frontend [JuNe PaulaJS](https://paulajs.com "JuNe PaulaJS") - [:fa-github: GitHub](https://github.com/EduardoRuizM/june-paulajs "GitHub")
+### 👉 Try JavaScript framework for frontend [JuNe PaulaJS](https://github.com/EduardoRuizM/june-paulajs "JuNe PaulaJS")
 
 # Author
 [Eduardo Ruiz](https://github.com/EduardoRuizM) <<eruiz@dataclick.es>>
 
-# [JuNe](https://just-needed.com "JuNe") / JUst NEeded Philosophy
+# JuNe / JUst NEeded Philosophy
 1. **Source code using less code as possible**
   So you can understand code and find bugs easier.
 2. **Few and optimized lines is better**
@@ -45,7 +54,7 @@ You can change your corporative (dark) color **jcbtheme**, and your custom font.
 - Combination of foreground/background with light/dark or dark/light must be readable/legible.
 
 | Name | ☀️Light/🌑Dark | Default | Definition | With text |
-| --- | :---: | --- | --- | --- | :---: |
+| --- | :---: | --- | --- | :---: |
 | **jcfnt** | - | sansserif | Font family used | - |
 | **jcfntsize** | - | .9em | Font size | - |
 | **jcfntszes** | - | .7em | Font size small | - |
@@ -224,7 +233,7 @@ Visible for 🖥️Desktop or 📱Mobile/Tablets.
 - Add this icon library and it´s dependencies (suchs as fonts/fa-\*.woff2).
 - Only for **Solid and Brands** family/styles.
 
-# CSS for [JuNe PaulaJS](https://paulajs.com "JuNe PaulaJS")
+# CSS for [JuNe PaulaJS](https://github.com/EduardoRuizM/june-paulajs "JuNe PaulaJS")
 - Customize your own styles for modal windows and toast notifications adding:
 - **wincssbg**: Modal windows background.
 - **wincssfg**: Modal windows foreground.
@@ -303,7 +312,7 @@ Also spacing of elements for easy clicking on touch devices and to facilitate pe
 
 # Installation
 - Choose the CSS file you need and fonts files required (and create `fonts/` folder in your project).
-- Add to your HTML head project with `<link rel="stylesheet" href="/june-css.min.css" />`
+- Add to your HTML head project with `<link rel="stylesheet" href="/june-css.min.css">`
 - Remember to change `fonts/` path if you prefer another location (recommended absolute paths / ).
 - Change your corporative/main color in `jcbtheme` (default orange #fea700).
 - Change `sansserif` font if you prefer other font and adjust `--jcfnt` name, and `@font-face family / src` path.
@@ -316,15 +325,15 @@ Also spacing of elements for easy clicking on touch devices and to facilitate pe
 | --- | ---: | --- | --- | --- |
 | june-css.css | 14 Kb | fonts/sansserif.woff2 | Version without Font Awesome |
 | june-css.min.css | 11 Kb | fonts/sansserif.woff2 | Minified version without Font Awesome |
-| june-cssfa.css | 112 Kb | fonts/\* | Version with Font Awesome (minified) |
-| june-cssfa.min.css | 109 Kb | fonts/\* | Minified version with Font Awesome |
+| june-cssfa.css | 114 Kb | fonts/\* | Version with Font Awesome (minified) |
+| june-cssfa.min.css | 110 Kb | fonts/\* | Minified version with Font Awesome |
 
-# [JuNe](https://just-needed.com "JuNe") Development Ecosystem
+# JuNe Development Ecosystem
 Everything you need to develop your project:
 ### Backend
 - [JuNe BackServer](https://github.com/EduardoRuizM/june-backserver "JuNe BackServer") With request routing, tokens, file upload, send Emails, WebSockets, SSE and captcha.
 - [JuNe WebServer](https://github.com/EduardoRuizM/june-webserver "JuNe WebServer") Web server with HMR.
 
 ### Frontend
-- [JuNe PaulaJS](https://paulajs.com "JuNe PaulaJS") Powerful JavaScript framework - [:fa-github: GitHub](https://github.com/EduardoRuizM/june-paulajs "GitHub")
+- [JuNe PaulaJS](https://github.com/EduardoRuizM/june-paulajs "JuNe PaulaJS") Powerful JavaScript framework
 - [JuNe CSS](https://github.com/EduardoRuizM/june-css "JuNe CSS") Full responsive CSS library with icons.

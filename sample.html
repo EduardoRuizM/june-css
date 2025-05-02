@@ -35,8 +35,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', m =
     <div style="float: left; padding-top: 20px">
       <nav role="navigation">
 	<div id="menuToggle">
-	  <input type="checkbox" style="background:red"><span></span><span></span><span></span>
-	  <ul id="menu">
+	  <input id="menuToggleChk" type="checkbox"><span></span><span></span><span></span>
+	  <ul id="menu" @click="this.e('menuToggleChk').checked=false">
 	    <a href="#"><li>Menu 1</li></a>
 	    <a href="#"><li>Menu 2</li></a>
 	  </ul>
@@ -227,7 +227,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', m =
   <div style="height: 110px"></div><!-- Same height as footer to avoid bottom hidden content text -->
 
   <footer style="position: absolute; bottom: 0; width: 100%">
-    <div style="height: 40px; padding-top: 14px" class="bgd tc">Try <a href="https://paulajs.com" target="_blank">PaulaJS</a></div>
+    <div style="height: 40px; padding-top: 14px" class="bgd tc">Try <a href="https://github.com/EduardoRuizM/june-paulajs" target="_blank">PaulaJS</a></div>
     <div style="height: 18px; color: #FFF; background: #171717" class="bgd sm tc">Powered by <a href="https://github.com/EduardoRuizM/june-css" target="_blank">JuNe CSS</a></div>
   </footer>
 

@@ -36,7 +36,7 @@
 
 @media (min-width: 1236px) {
   :root, :root.light, :root.dark {
-	--jcfntsize:	1.04em;
+	--jcfntsize:	1.035em;
   }
 }
 
@@ -195,10 +195,12 @@ textarea {
 	white-space: nowrap;
 }
 
+.selelm {
+	transition: .8s;
+}
 ::selection, .selelm:hover, select option:checked {
 	color: var(--jcclight);
 	background-color: var(--jcbtheme);
-	font: CALC(var(--jcfntsize) - .3em) Verdana;
 }
 
 .main {
@@ -334,7 +336,8 @@ input[type=checkbox], input[type=radio] {
 	background: var(--jcbglight);
   }
   > input {
-	flex: 1 0 auto;
+	flex: 1 1 auto;
+	width: 100%;
 	border: 0;
 	border-radius: 4px;
 	color: #333;

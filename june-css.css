@@ -1,5 +1,5 @@
-/* JuNe CSS 2.1.1 - https://github.com/EduardoRuizM/june-css  */
-/*    Copyright (c) 2024 Eduardo Ruiz <eruiz@dataclick.es>    */
+/* JuNe CSS 2.1.2 - https://github.com/EduardoRuizM/june-css  */
+/*    Copyright (c) 2025 Eduardo Ruiz <eruiz@dataclick.es>    */
 
 :root, :root.light {
 	--jcfnt:	'sserif';	/* Font */
@@ -54,10 +54,9 @@ body {
 }
 
 .bgd {
-	color: var(--jcclight);
-	background: var(--jcbglight);
+	color: var(--jcbbclr);
+	background: #333;
 }
-
 
 body, div, td, input, textarea, select, button, .fg {
 	font: var(--jcfntsize) var(--jcfnt);
@@ -93,16 +92,16 @@ a:hover, a:active, .lnk:hover {
 
 .dlnk:link, .dlnk:visited, .dlnk {
 	cursor: pointer;
-	color: var(--jcclight);
+	color: var(--jcbtheme);
 	text-decoration: none;
 	transition: all 0.5s linear;
 }
 .dlnk:hover, .dlnk:active {
 	text-decoration: none;
-	color: var(--jcbtheme);
+	color: color-mix(in srgb, var(--jcbtheme) 30%, #FFF);
 }
 
-.tlnk:link, .tlnk:visited, .dlnk {
+.tlnk:link, .tlnk:visited, .tlnk {
 	cursor: pointer;
 	color: var(--jcbglight);
 	text-decoration: none;
@@ -203,11 +202,6 @@ textarea {
 	background-color: var(--jcbtheme);
 }
 
-.main {
-	min-height: 100%;
-	position: relative;
-}
-
 .button {
 	cursor: pointer;
 	color: var(--jcbbclr);
@@ -232,18 +226,18 @@ textarea {
 	cursor: not-allowed;
 }
 
-:is(.txt, textarea):disabled, .txtgrp:has(input:disabled) {
+:is(.txt, textarea, select):disabled, .txtgrp:has(input:disabled) {
 	filter: brightness(0.95);
 	background-image: linear-gradient(to top, #CCC 30%, #AAA 100%);
 }
-input[type=text]:disabled {
+input:disabled, select:disabled {
 	opacity: 0.5;
+	filter: brightness(.85);
 }
 
-select[readonly], textarea:read-only, .readonly {
+input[readonly], select[readonly], textarea:read-only, .readonly {
 	opacity: 0.7;
 	color: var(--jcbgray);
-	filter: hue-rotate(10deg);
 }
 :is(input, textarea, select):invalid {
 	box-shadow: 0 0 8px var(--jcbred);
@@ -300,7 +294,7 @@ input[type=checkbox], input[type=radio] {
 	border-radius: 50px;
 	background-color: #FFF;
 	border: 1px solid #D9DADC;
-	box-shadow: inset -20px 0 0 0 #DDD;
+	box-shadow: inset -20px 0 0 0 #CCC;
 	transition-duration: .2s;
 }
 .switch:checked {
@@ -335,8 +329,9 @@ input[type=checkbox], input[type=radio] {
 	color: var(--jcclight) !important;
 	background: var(--jcbglight);
   }
-  > input {
+  > input, > textarea {
 	flex: 1 1 auto;
+	z-index: 0;
 	width: 100%;
 	border: 0;
 	border-radius: 4px;
@@ -384,10 +379,10 @@ input[type=checkbox], input[type=radio] {
 	text-overflow: ellipsis;
   }
   th {
-	color: var(--jcclight);
-	background: var(--jcbglight);
+	color: var(--jcbbclr);
+	background: #333;
 	font-weight: normal;
-	border-right: 1px solid var(--jcclight);
+	border-right: 1px solid var(--jcbbclr);
   }
   th div {
 	cursor: pointer;
@@ -423,7 +418,6 @@ input[type=checkbox], input[type=radio] {
     }
     tr {
 	display: block;
-	background: #FFF;
 	margin-bottom: .625em;
 	border-bottom: 3px solid #DDD;
     }
@@ -462,6 +456,7 @@ input[type=checkbox], input[type=radio] {
 [data-tooltip]:before {
 	z-index: 10;
 	position: absolute;
+	min-width: max-content;
 	max-width: 80vw;
 	overflow-wrap: break-word;
 	padding: 2px 4px;
@@ -601,6 +596,12 @@ input[type=checkbox], input[type=radio] {
 @keyframes loader2 {
 	0% {scale: 0; opacity: 1}
 	100% {scale: 1; opacity: 0}
+}
+
+@keyframes toast-circle {
+  100% {
+	stroke-dashoffset: 0;
+  }
 }
 
 .menu ul {

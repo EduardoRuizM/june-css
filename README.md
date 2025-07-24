@@ -79,7 +79,7 @@ You can change your corporative (dark) color **jcbtheme**, and your custom font.
 Main color and background are reversed, and the (visuality) meaning changes: light is dark and dark is light.
 
 | Name | 🌑Light/☀️Dark | Default | Definition | With text |
-| --- | :---: | --- | --- | --- | :---: |
+| --- | :---: | --- | --- | :---: |
 | **jcclr** | ☀️Dark | ![#fff](https://placehold.co/15x15/fff/fff.png) `#fff` | Color for foreground | ![](https://placehold.co/50x20/222/fff.png) |
 | **jcbg** | 🌑Light | ![#222](https://placehold.co/15x15/222/222.png) `#222` | Color for background | ![](https://placehold.co/50x20/222/fff.png) |
 | **jcclight** | 🌑Light | ![#333](https://placehold.co/15x15/333/333.png) `#333` | Color for foreground | ![](https://placehold.co/50x20/fff/333.png) |
@@ -91,12 +91,12 @@ For HTMLElements or to use as a class.
 | Class | Element | Definition | Used | Sample |
 | --- | --- | --- | --- | :---: |
 | - | body | Background ☀️light | jcbg | ![](https://placehold.co/50x20/fff/fff.png) |
-| **.bgd** | - | Text and background 🌑dark | jcclight, jcbglight | ![](https://placehold.co/50x20/222/fff.png) |
+| **.bgd** | - | Text and background 🌑dark | jcbbclr, #333 | ![](https://placehold.co/50x20/333/fff.png) |
 | - | img | Ready for responsive, so don´t specify width/height | - | - |
 | - | header | Top header position | - | - |
 | **.fg** | body, div, td, input, button, textarea, select, option | Color, font and size | jcclr, jcfnt, jcfntsize | ![](https://placehold.co/50x20/fff/333.png) |
 | **.lnk** | a | Links for ☀️light backgrounds, brighter on hover | jcbtheme | ![](https://placehold.co/50x20/fff/fea700.png) |
-| **.dlnk** | - | Links for 🌑dark backgrounds, darker on hover | jcbtheme, jcclight | ![](https://placehold.co/50x20/fea700/fff.png) |
+| **.dlnk** | - | Links for 🌑dark backgrounds, darker on hover | jcbtheme, jcbtheme+#fff | ![](https://placehold.co/50x20/ffc720/fea700.png) |
 | **.tlnk** | - | Links for theme backgrounds | jcbglight, jcclight | ![](https://placehold.co/50x20/fea700/fff.png) |
 | **.txt** | select | For inputs and selects, theme on hover | - | ![](https://placehold.co/50x20/fff/333.png) |
 | - | option | For options | jcclr, jcbg | - |
@@ -325,8 +325,8 @@ Also spacing of elements for easy clicking on touch devices and to facilitate pe
 | --- | ---: | --- | --- | --- |
 | june-css.css | 14 Kb | fonts/sansserif.woff2 | Version without Font Awesome |
 | june-css.min.css | 11 Kb | fonts/sansserif.woff2 | Minified version without Font Awesome |
-| june-cssfa.css | 84 Kb | fonts/\* | Version with Font Awesome (minified) |
-| june-cssfa.min.css | 80 Kb | fonts/\* | Minified version with Font Awesome |
+| june-cssfa.css | 85 Kb | fonts/\* | Version with Font Awesome (minified) |
+| june-cssfa.min.css | 82 Kb | fonts/\* | Minified version with Font Awesome |
 
 # JuNe Development Ecosystem
 Everything you need to develop your project:

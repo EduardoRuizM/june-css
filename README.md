@@ -323,7 +323,7 @@ Also spacing of elements for easy clicking on touch devices and to facilitate pe
 
 | File | Size | Font(s) to include | Definition |
 | --- | ---: | --- | --- | --- |
-| june-css.css | 14 Kb | fonts/sansserif.woff2 | Version without Font Awesome |
+| june-css.css | 15 Kb | fonts/sansserif.woff2 | Version without Font Awesome |
 | june-css.min.css | 11 Kb | fonts/sansserif.woff2 | Minified version without Font Awesome |
 | june-cssfa.css | 85 Kb | fonts/\* | Version with Font Awesome (minified) |
 | june-cssfa.min.css | 82 Kb | fonts/\* | Minified version with Font Awesome |

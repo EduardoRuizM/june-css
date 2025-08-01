@@ -288,7 +288,7 @@ input[type=checkbox], input[type=radio] {
 .switch {
 	margin: 10px 4px -5px 0;
 	outline: 0;
-	-webkit-appearance: none;
+	appearance: none;
 	width: 40px !important;
 	height: 20px !important;
 	border-radius: 50px;
@@ -317,6 +317,7 @@ input[type=checkbox], input[type=radio] {
 .txtgrp {
 	display: flex;
 	align-content: stretch;
+	align-items: stretch;
 	border-radius: 4px;
 	border: 1px solid #DDD;
 	background-image: linear-gradient(to top, #CDE 20%, #FFF 80%);
@@ -330,9 +331,10 @@ input[type=checkbox], input[type=radio] {
 	background: var(--jcbglight);
   }
   > input, > textarea {
-	flex: 1 1 auto;
+	flex: 1 1 0%;
 	z-index: 0;
 	width: 100%;
+	min-width: 0;
 	border: 0;
 	border-radius: 4px;
 	color: #333;
@@ -350,6 +352,7 @@ input[type=checkbox], input[type=radio] {
 	margin: 0;
 	padding: 0 4px;
 	border-radius: 0px;
+	flex-shrink: 0;
   }
 }
 :is(.txtgrp div, .txtgrp .button):first-child {
@@ -615,13 +618,15 @@ input[type=checkbox], input[type=radio] {
 }
 .menu li a, .dropbtn {
 	display: inline-block;
-	color: var(--jcclight);
 	text-align: left;
 	padding: 1px 16px;
 	text-decoration: none;
+	color: var(--jcclight);
+	background: var(--jcbtheme);
+	transition: color 0.8s ease;
 }
 .menu li a:hover, .dropdown:hover .dropbtn {
-	color: var(--jcclight);
+	color: var(--jcclight) !important;
 	background: var(--jcbglight);
 }
 li.dropdown {
